@@ -11,6 +11,8 @@ install_python() {
   brew install python python3
   pip2 install --upgrade pip setuptools wheel
   pip3 install --upgrade pip setuptools wheel
+
+  pip2 install thefuck
 }
 
 install_node() {
