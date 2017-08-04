@@ -1,12 +1,11 @@
 #! /bin/zsh
-BASEDIR=$(dirname "$0/")
 
-source "${BASEDIR}/common_functions.sh"
+download_and_install_docker () {
+    docker_dir="/tmp/docker_$(timestamp)/"
+    app='Docker'
 
-app='Docker'
+    create_dir $docker_dir
 
-
-download_and_install () {
     echo_say "$app" "Downloading docker"
     curl -L https://download.docker.com/mac/stable/Docker.dmg  -o "${docker_dir}Docker.dmg"
 
@@ -24,14 +23,5 @@ download_and_install () {
       else
         echo_say "$app" 'Checksum Failed. Install Aborted';
     fi
-
+    remove_dir $docker_dir
 }
-
-docker_dir="/tmp/docker_$(timestamp)/"
-
-create_dir $docker_dir
-
-#Install function for docker
-download_and_install
-
-remove_dir $docker_dir

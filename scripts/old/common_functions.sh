@@ -15,7 +15,7 @@ remove_dir () {
   echo_say "$app" "Removing Temporary Directory $1"
   rm -rf $1
 }
-export -f echo_say > /dev/null
-export -f timestamp > /dev/null
-export -f create_dir > /dev/null
-export -f remove_dir > /dev/null
+
+renew_sudo () { # helper function for when the following command needs 'sudo' active but shouldn't be called with it
+  sudo -S -v <<< "${sudo_password}" 2> /dev/null
+}

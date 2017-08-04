@@ -1,12 +1,9 @@
 #! /bin/zsh
-BASEDIR=$(dirname "$0")
 
-source "${BASEDIR}/common_functions.sh"
-
-ohmyzsh_dir="/tmp/ohmyzsh_$(timestamp)/"
-app="Oh My zsh"
-
-download_and_install () {
+download_and_install_oh_my_zsh () {
+    ohmyzsh_dir="/tmp/ohmyzsh_$(timestamp)/"
+    create_dir $ohmyzsh_dir
+    app="Oh My zsh"
     echo_say "$app" "Downloading Oh My zsh"
 
     curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -o "${ohmyzsh_dir}install.sh"
@@ -23,18 +20,10 @@ download_and_install () {
     # install
     echo_say "$app" "Installing fonts for Powerline"
     sh "${ohmyzsh_dir}fonts/install.sh"
+
+    echo_say ""$app"" "Copying dotfiles"
+    cp "${BASEDIR}/../tools/.zshrc" ~/.zshrc
+
+
+   remove_dir $ohmyzsh_dir
 }
-
-copy_dotfiles () {
-  echo_say ""$app"" "Copying dotfiles"
-   cp "${BASEDIR}/../tools/.zshrc" ~/.zshrc
-}
-
-create_dir $ohmyzsh_dir
-
-#Install function for iTerm2
-download_and_install
-
-copy_dotfiles
-
-remove_dir $ohmyzsh_dir

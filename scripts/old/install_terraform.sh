@@ -1,13 +1,10 @@
 #! /bin/zsh
-BASEDIR=$(dirname "$0/")
 
-source "${BASEDIR}/common_functions.sh"
-
-app='Terraform'
-terraform_CHECKSUM='1584dc21ad5ac1dc0d9a2876542a85d092778d00a0622622c28f8740abadddb9'
-
-
-download_and_install () {
+download_and_install_terraform () {
+    terraform_dir="/tmp/terraform_$(timestamp)/"
+    create_dir $terraform_dir
+    app='Terraform'
+    terraform_CHECKSUM='1584dc21ad5ac1dc0d9a2876542a85d092778d00a0622622c28f8740abadddb9'
     echo_say "$app" "Downloading terraform"
     curl -L https://releases.hashicorp.com/terraform/0.10.0/terraform_0.10.0_darwin_amd64.zip -o "${terraform_dir}terraform.zip"
 
@@ -24,13 +21,5 @@ download_and_install () {
         echo_say "$app" 'Checksum Failed. Install Aborted';
     fi
 
+    remove_dir $terraform_dir
 }
-
-terraform_dir="/tmp/terraform_$(timestamp)/"
-
-create_dir $terraform_dir
-
-#Install function for terraform
-download_and_install
-
-remove_dir $terraform_dir
