@@ -1,9 +1,16 @@
 install_brew_apps () {
   brew install neovim chromedriver  duti hr httpie imagemagick jq livestreamer mas mediainfo mkvtoolnix mp4v2 lastpass-cli
 
+  # install hashicorp stack
+  brew install terraform packer consul vault
+
   # install zsh_plugins
   brew install zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting zsh-git-prompt
 
+ }
+
+ install_aws_related () {
+   brew install awscli
  }
 
 install_cask_apps () {

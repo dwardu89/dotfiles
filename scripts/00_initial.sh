@@ -1,3 +1,7 @@
+context_echo () {
+  echo "$(tput bold)[$1]$(tput sgr0) $2"
+}
+
 bold_echo() { # helper function for bold text
   echo "$(tput bold)${1}$(tput sgr0)"
 }

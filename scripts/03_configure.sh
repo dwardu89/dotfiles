@@ -1,6 +1,6 @@
 restore_settings() {
 
-  }
+}
 
 configure_zsh() { # make zsh default shell
   sudo -S sh -c 'echo "/usr/local/bin/zsh" >> /etc/shells' <<< "${sudo_password}" 2> /dev/null
@@ -8,10 +8,12 @@ configure_zsh() { # make zsh default shell
 }
 
 configure_oh_my_zsh () {
-
+  echo_say "OhMyZsh" "Copying config"
+  cp "${BASEDIR}/../tools/.zshrc" ~/.zshrc
 }
 
 configure_git () {
+    echo_say "git" "Configuring git"
     git config --global user.name "${name}"
     git config --global user.email "${github_email}"
     git config --global github.user "${github_username}"
@@ -21,6 +23,8 @@ configure_git () {
 }
 
 install_atom_packages() {
+  echo_say "Atom" "Configuring Atom"
+
   # packages
   apm install highlight-line language-python
 
