@@ -6,8 +6,11 @@ install_brew_apps () {
 
   # install zsh_plugins
   brew install zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting zsh-git-prompt
-
  }
+
+install_air_vpn_client () {
+  brew cask install eddie
+}
 
  install_aws_related () {
    brew install awscli

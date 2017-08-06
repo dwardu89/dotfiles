@@ -45,9 +45,10 @@ ask_details() {
 
   clear
   bold_echo 'Some contact information to be set in the lock screen:'
+  read -p 'Your Name: ' lockscreen_name
   read -p 'Email address: ' email
   read -p 'Telephone number: ' telephone
-  sudo -S defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Email: ${email}\nTel: ${telephone}" <<< "${sudo_password}" 2> /dev/null
+  sudo -S defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "If found please contact ${lockscreen_name}\nEmail: ${email}\nTel: ${telephone}" <<< "${sudo_password}" 2> /dev/null
 
   clear
 }

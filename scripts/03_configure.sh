@@ -2,6 +2,11 @@ restore_settings() {
 
 }
 
+configure_iterm_2 () {
+  echo_say "iTerm 2" "Configuring iTerm 2"
+
+}
+
 configure_zsh() { # make zsh default shell
   sudo -S sh -c 'echo "/usr/local/bin/zsh" >> /etc/shells' <<< "${sudo_password}" 2> /dev/null
   sudo -S chsh -s '/usr/local/bin/zsh' "${USER}" <<< "${sudo_password}" 2> /dev/null
@@ -26,8 +31,8 @@ install_atom_packages() {
   echo_say "Atom" "Configuring Atom"
 
   # packages
-  apm install highlight-line language-python
+  apm install highlight-line language-python language-todo language-shellscript language-yaml language-xml language-json
 
   # themes and syntaxes
-  apm install peacock-syntax
+  apm install peacock-syntax solarized-dark-syntax atom-dark-ui pretty-json python-tools
 }
