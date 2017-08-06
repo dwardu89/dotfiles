@@ -1,7 +1,3 @@
-restore_settings() {
-
-}
-
 configure_iterm_2 () {
   echo_say "iTerm 2" "Configuring iTerm 2"
 
