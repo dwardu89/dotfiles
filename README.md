@@ -6,7 +6,7 @@ Edward's dotfiles and MacOS Setup
 You can run the whole script by calling the following command in your terminal.
 
 ```
-bash -c "$(curl -fsSL 'https://raw.githubusercontent.com/dwardu89/dotfiles/shell-execution-change/setup.sh')"
+bash -c "$(curl -fsSL 'https://raw.githubusercontent.com/dwardu89/dotfiles/master/setup.sh')"
 ```
 
 ### Structure
