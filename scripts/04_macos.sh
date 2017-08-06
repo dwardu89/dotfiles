@@ -64,13 +64,6 @@ configure_macos () {
   # Key Repeat (false (Default) for enabled, true for disabled)
   defaults write -g ApplePressAndHoldEnabled -bool false
 
-  # Security Related
-  # Enable SSH Remote Login
-  #sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist
-
-  # Disable SSH Remote Login
-  sudo launchctl unload -w /System/Library/LaunchDaemons/ssh.plist
-
   # Login Window
   # Add text to login screen
   sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "If found please contact:\n e-mail:hello@dwardu.com"  <<< "${sudo_password}" 2> /dev/null
