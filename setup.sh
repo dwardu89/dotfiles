@@ -1,10 +1,11 @@
-#! /bin/zsh
+#! /bin/bash
 run_setup () {
   #download the dofiles from github
   curl --progress-bar --location 'https://github.com/dwardu89/dotfiles/archive/master.zip' | ditto -xk - '/tmp'
 
   # source all shell scripts
   for shell_script in "/tmp/dotfiles-master/scripts/"*.sh; do
+    echo "${shell_script}"
     source "${shell_script}"
   done
 
@@ -14,9 +15,9 @@ run_setup () {
   update_system
 
   # Languages and Utilities
+  install_brew
   install_python
   install_node
-  install_brew
 
   # Applications
 

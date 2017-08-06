@@ -1,5 +1,5 @@
 install_brew_apps () {
-  brew install neovim chromedriver  duti hr httpie imagemagick jq livestreamer mas mediainfo mkvtoolnix mp4v2 lastpass-cli
+  brew install neovim chromedriver  duti hr httpie imagemagick jq livestreamer mas mediainfo mkvtoolnix mp4v2 lastpass-cli  <<< "${sudo_password}" 2> /dev/null
 
   # install hashicorp stack
   brew install terraform packer consul vault
@@ -9,10 +9,12 @@ install_brew_apps () {
  }
 
 install_air_vpn_client () {
+  renew_sudo
   brew cask install eddie
 }
 
  install_aws_related () {
+   renew_sudo
    brew install awscli
  }
 
