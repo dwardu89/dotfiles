@@ -4,8 +4,8 @@ configure_iterm_2 () {
 }
 
 configure_zsh() { # make zsh default shell
-  sudo -S sh -c 'echo "/usr/local/bin/zsh" >> /etc/shells' <<< "${sudo_password}" 2> /dev/null
-  sudo -S chsh -s '/usr/local/bin/zsh' "${USER}" <<< "${sudo_password}" 2> /dev/null
+  sudo -S sh -c 'echo "/usr/bin/zsh" >> /etc/shells' <<< "${sudo_password}" 2> /dev/null
+  sudo -S chsh -s '/usr/bin/zsh' "${USER}" <<< "${sudo_password}" 2> /dev/null
 }
 
 configure_oh_my_zsh () {
