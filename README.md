@@ -18,9 +18,12 @@ Extra scripts can be added by adding another shell script or modifying the exist
 according to what happens inside.
 
 
+The `launchd` folder contains files that you can use in order to run scripts automatically. These will need to be manually copied and modified where the path is.
+
 ```
 .
 ├── setup.sh
+├── launchd
 ├── scripts
 └── tools
   └── files

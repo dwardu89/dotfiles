@@ -23,6 +23,9 @@ install_cask_apps () {
   renew_sudo
   brew cask install alfred aws-vault atom google-chrome
 
+  # Install security based apps
+  brew cask install keybase
+
   # fonts
   brew tap caskroom/fonts
   # multiple
