@@ -7,6 +7,11 @@ install_brew() {
   brew tap caskroom/cask
 }
 
+install_golang() {
+  brew install go --cross-compile-common
+}
+
+
 install_python() {
   brew install python python3
   pip2 install --upgrade pip setuptools wheel

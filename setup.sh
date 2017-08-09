@@ -17,6 +17,7 @@ run_setup () {
   # Languages and Utilities
   install_brew
   install_python
+  install_golang
   install_node
 
   # Applications
