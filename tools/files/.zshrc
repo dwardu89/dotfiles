@@ -5,9 +5,6 @@ export VAGRANT_DEFAULT_PROVIDER=virtualbox
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
-# Source the virtualenvwrapper script
-source /usr/local/bin/virtualenvwrapper.sh
-
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -55,7 +52,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx virtualenv kubectl aws zsh-256color tmux battery virtualenv virtualenvwrapper vim-integration zsh-navigation-tools zsh_reload)
+plugins=(git osx virtualenv kubectl aws zsh-256color tmux battery virtualenv vim-integration zsh-navigation-tools zsh_reload)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -67,11 +64,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+   export EDITOR='mvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -85,8 +82,8 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="atom ~/.zshrc"
-alias ohmyzsh="atom ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/edwardvella/google-cloud-sdk/path.zsh.inc'; fi
