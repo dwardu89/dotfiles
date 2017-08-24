@@ -17,7 +17,6 @@ run_setup () {
   # Languages and Utilities
   install_brew
   install_python
-  install_golang
   install_node
 
   # Applications
@@ -36,6 +35,10 @@ run_setup () {
 
   # MacOS Configuration
   configure_macos
+
+  # Update dotfiles
+  backup_existing_dotfiles
+  symlink_dotfiles
 
   # Cleanup
   cleanup_brew
