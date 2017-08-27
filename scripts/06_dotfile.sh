@@ -16,7 +16,7 @@ symlink_dotfiles() {
   DOTFILES_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
   for i in "${dotfiles[@]}"
   do
-    SOURCE="${DOTFILES_PATH}/../tools/files/${i}"
+    SOURCE="${DOTFILES_PATH}/../dotfiles/${i}"
     DESTINATION="${HOME}/${i}"
     if [ -f  $SOURCE ]; then
        echo "Symlinking ${FILE} to ${FILE}.bak."

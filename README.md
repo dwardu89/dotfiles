@@ -3,10 +3,10 @@ Edward's dotfiles and MacOS Setup
 
 ### Run the whole script
 
-You can run the whole script by calling the following command in your terminal.
+You can run the script by calling the following command in your terminal.
 
 ```
-bash -c "$(curl -fsSL 'https://raw.githubusercontent.com/dwardu89/dotfiles/master/setup.sh')"
+bash setup.sh
 ```
 
 ### Structure
@@ -14,22 +14,20 @@ bash -c "$(curl -fsSL 'https://raw.githubusercontent.com/dwardu89/dotfiles/maste
 This repository is structured in the following way, the main setup script is at the root `setup.sh` and all the other scripts that are
 used can be found in the `scripts` folder. They are all sourced and in the `setup.sh` file and then run.
 
-Extra scripts can be added by adding another shell script or modifying the existing ones. Each shell script has functions that are categorised
-according to what happens inside.
+Extra scripts can be added by adding another shell script or modifying the existing ones. Each shell script has functions that are categorised according to what happens inside.
 
+The `tools` folder contains files related to the scripts as well as manual scripts that need to be set up after the `setup.sh` is run.
 
 The `launchd` folder contains files that you can use in order to run scripts automatically. These will need to be manually copied and modified where the path is.
 
 ```
 .
-├── setup.sh
-├── launchd
+├── dotfiles
 ├── scripts
 └── tools
   └── files
+  └── launchd
       └── .....
+
+└── setup.sh
 ```
-
-### Thanks to
-
-I combed several dotfile solutions, however the best one that i found was in [Vítor Galvão's](https://github.com/vitorgalvao/dotfiles) repository. I used this to also incorporate my own dotfiles, and create scripts for that.
