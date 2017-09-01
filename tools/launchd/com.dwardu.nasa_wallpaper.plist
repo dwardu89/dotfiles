@@ -6,9 +6,9 @@
 		<string>com.dwardu.nasa_wallpaper</string>
 		<key>Program</key>
 		<string>~/github/dotfiles/tools/files/set_nasa_wallpaper.sh</string>
-    <key>RunAtLoad</key>
-    <true/>
-    <key>StartInterval</key>
-    <integer>28800</integer>
+	  <key>RunAtLoad</key>
+	  <true/>
+	  <key>StartInterval</key>
+	  <integer>28800</integer>
 	</dict>
 </plist>

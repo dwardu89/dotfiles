@@ -1,5 +1,5 @@
 
-declare -a dotfiles=('.zshrc' '.vimrc');
+declare -a dotfiles=('.zshrc' '.vimrc' '.tmux.conf');
 
 backup_existing_dotfiles() {
   for i in "${dotfiles[@]}"

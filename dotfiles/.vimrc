@@ -4,6 +4,8 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
 " Badwolf theme
 Plugin 'sjl/badwolf'
@@ -13,8 +15,6 @@ Plugin 'scrooloose/nerdtree'
 " NerdTREE with tabs
 Plugin 'jistr/vim-nerdtree-tabs'
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
 
 " interact with tmux
 Plugin 'benmills/vimux'
