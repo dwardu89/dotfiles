@@ -1,7 +1,9 @@
 #! /bin/bash
 run_setup () {
+  DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
   # source all shell scripts
-  for shell_script in "${HOME}/scripts/"*.sh;
+  for shell_script in "${DIR}/scripts/"*.sh;
   do
     echo "${shell_script}"
     source "${shell_script}"
