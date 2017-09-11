@@ -45,3 +45,7 @@ install_cask_apps () {
   brew cask install font-pecita
 
 }
+
+install_iterm_2() {
+  
+}
