@@ -10,7 +10,9 @@ configure_zsh() { # make zsh default shell
 
 configure_oh_my_zsh () {
   echo_say "OhMyZsh" "Copying config"
-  cp "${BASEDIR}/../tools/.zshrc" ~/.zshrc
+
+  # Install zsh syntax highlight plugin
+  git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins
 }
 
 configure_git () {

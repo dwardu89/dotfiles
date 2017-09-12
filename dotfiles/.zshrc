@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=~/Library/Python/2.7/bin:$PATH
+export PATH="/usr/local/sbin:$PATH"
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 
 # Path to your oh-my-zsh installation.
@@ -52,7 +52,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx virtualenv kubectl aws zsh-256color tmux battery virtualenv vim-integration zsh-navigation-tools zsh_reload)
+plugins=(git osx virtualenv kubectl aws zsh-256color tmux battery virtualenv vim-integration zsh-navigation-tools zsh_reload zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -92,3 +92,8 @@ if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/edwardvella/goo
 if [ -f '~/completion.zsh.inc' ]; then source '~/google-cloud-sdk/completion.zsh.inc'; fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Check if a .zshrc-extra file exists, this file is used to keep any machine specific
+# variables, functions local.
+touch .zshrc-extra
+source .zshrc-extra
