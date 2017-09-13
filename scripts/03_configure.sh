@@ -12,7 +12,8 @@ configure_oh_my_zsh () {
   echo_say "OhMyZsh" "Copying config"
 
   # Install zsh syntax highlight plugin
-  git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins
+  git clone git://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins
+  git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 }
 
 configure_git () {

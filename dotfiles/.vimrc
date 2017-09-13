@@ -8,7 +8,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Badwolf theme
-Plugin 'sjl/badwolf'
+Plugin 'dracula/vim'
 
 " NerdTREE to navigate the file system within vim
 Plugin 'scrooloose/nerdtree'
@@ -49,4 +49,4 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 nnoremap <F5> :GundoToggle<CR>
 
 syntax on
-colorscheme badwolf
+color dracula

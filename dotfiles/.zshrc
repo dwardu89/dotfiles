@@ -52,7 +52,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx virtualenv kubectl aws zsh-256color tmux battery virtualenv vim-integration zsh-navigation-tools zsh_reload zsh-syntax-highlighting)
+plugins=(git osx virtualenv kubectl aws zsh-256color tmux battery virtualenv vim-integration zsh-navigation-tools zsh_reload zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
