@@ -1,6 +1,7 @@
 install_brew_apps () {
   brew install neovim chromedriver  duti hr httpie imagemagick jq livestreamer mas mediainfo mkvtoolnix mp4v2 lastpass-cli  <<< "${sudo_password}" 2> /dev/null
-
+  # install tmux related things
+  brew install reattach-to-user-namespace
   # install hashicorp stack
   brew install terraform packer consul vault
 

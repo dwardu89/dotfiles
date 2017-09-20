@@ -10,6 +10,9 @@ Plugin 'VundleVim/Vundle.vim'
 " Badwolf theme
 Plugin 'dracula/vim'
 
+" Vim Colourschemes
+Plugin 'flazz/vim-colorschemes'
+
 " NerdTREE to navigate the file system within vim
 Plugin 'scrooloose/nerdtree'
 " NerdTREE with tabs
@@ -49,4 +52,17 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 nnoremap <F5> :GundoToggle<CR>
 
 syntax on
-color dracula
+set background=dark
+colorscheme solarized
+let g:solarized_termcolors=256
+
+set number
+
+set tabstop=8
+set expandtab
+set shiftwidth=2 " or whatever
+set smarttab autoindent
+
+nnoremap <F5> :set invpaste paste?<Enter>
+imap <F5> <C-O><F5>
+set pastetoggle=<F5>
