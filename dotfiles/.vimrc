@@ -18,6 +18,8 @@ Plugin 'scrooloose/nerdtree'
 " NerdTREE with tabs
 Plugin 'jistr/vim-nerdtree-tabs'
 
+" Add Dash support to vim
+Plugin 'rizzatti/dash.vim'
 
 " interact with tmux
 Plugin 'benmills/vimux'
