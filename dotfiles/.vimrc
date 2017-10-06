@@ -65,4 +65,8 @@ set smarttab autoindent
 
 nnoremap <F5> :set invpaste paste?<Enter>
 imap <F5> <C-O><F5>
+
 set pastetoggle=<F5>
+
+
+set clipboard=unnamed
