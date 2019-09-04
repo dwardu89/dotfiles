@@ -7,6 +7,8 @@ install_brew_apps () {
 
   # install zsh_plugins
   brew install zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting zsh-git-prompt
+  brew install gnu-tar  --with-default-names
+  brew install gnu-sed  --with-default-names
  }
 
 install_air_vpn_client () {
