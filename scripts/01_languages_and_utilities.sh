@@ -5,12 +5,20 @@ install_brew() {
 
   # Installing brew cask
   brew tap caskroom/cask
+  brew tap homebrew/cask-drivers
+  brew tap homebrew/cask-fonts
 }
 
 install_golang() {
-  brew install go --cross-compile-common
+  brew install go
 }
 
+install_mac_app_store_cli() {
+  brew install mas
+  # Install 1blocker
+  mas search 1blocker | awk '{print $1}' | xargs mas install
+  mas search "fantastical 2" | awk '{print $1}' | xargs mas install
+}
 
 install_python() {
   brew install python python3

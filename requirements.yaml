@@ -1,0 +1,23 @@
+---
+taps:
+  - homebrew/cask
+  - homebrew/cask-drivers
+  - homebrew/cask-fonts
+  - homebrew/core
+
+formulae:
+  - yamllint
+  - mas
+
+cask:
+  - alfred
+  - chrome
+  - eddie
+  - logitech-options
+  - whatsapp
+  - visual-studio-code
+  - vlc
+  - iterm2
+  - slack
+  - lastpass
+  - 1password
