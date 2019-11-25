@@ -1,0 +1,14 @@
+{
+  "taps": [
+    "homebrew/cask",
+    "homebrew/cask-drivers",
+    "homebrew/cask-fonts",
+    "homebrew/core"
+  ],
+  "formulae": [
+    "yamllint"
+  ],
+  "cask": [
+    "vlc"
+  ]
+}
