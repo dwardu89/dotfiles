@@ -5,7 +5,7 @@
 		<key>Label</key>
 		<string>com.dwardu.nasa_wallpaper</string>
 		<key>Program</key>
-		<string>~/github/dotfiles/tools/files/set_nasa_wallpaper.sh</string>
+		<string>~/dotfiles/tools/files/set_nasa_wallpaper.sh</string>
 	  <key>RunAtLoad</key>
 	  <true/>
 	  <key>StartInterval</key>

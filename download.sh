@@ -3,6 +3,9 @@
 # Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+# Update brew
+brew update
+
 # Install git to pull from git repository
 brew install git jq
 
