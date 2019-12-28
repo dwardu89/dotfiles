@@ -1,12 +1,12 @@
-Edward's dotfiles and MacOS Setup
+Dotfiles and MacOS Setup
 ======
 
 ### Run the whole script
 
-You can run the script by calling the following command in your terminal.
+You can run the script by calling the following command in your terminal. It will download the repository to you from git and store it in `~/dotfiles`.
 
 ```
-bash setup.sh
+bash <(curl https://raw.githubusercontent.com/dwardu89/dotfiles/master/download.sh)
 ```
 
 ### Structure
@@ -28,6 +28,6 @@ The `launchd` folder contains files that you can use in order to run scripts aut
   └── files
   └── launchd
       └── .....
-
+└── download.sh
 └── setup.sh
 ```
