@@ -1,120 +1,89 @@
-# If you come from bash you might have to change your $PATH.
-export VAGRANT_DEFAULT_PROVIDER=virtualbox
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-# Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+export MAIN_EDITOR="vim"
+export EDITOR=$MAIN_EDITOR
+export VISUAL=$EDITOR
+export HISTFILE=~/.zsh_history
+export HISTSIZE=100000
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
+# Setup the GNU Tools
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/binutils/bin:$PATH"
+PATH="/usr/local/opt/ed/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/gnu-indent/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/gnu-which/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/m4/bin:$PATH"
+PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/ncurses/bin:$PATH"
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
 
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+# source anaconda
+# echo "Conda activated"
+source /usr/local/anaconda3/bin/activate
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+# load zgen
+# Set the automated reset on change
+ZGEN_RESET_ON_CHANGE=(${HOME}/.zshrc ${HOME}/.zshrc.local)
+source "${HOME}/.zgen/zgen.zsh"
 
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# zsh-users/zsh-autosuggestions
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff0010,bg=#000000,bold,underline"
+ZSH_AUTOSUGGEST_STRATEGY="history"
 
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
+# if the init script doesn't exist
+if ! zgen saved; then
 
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+  # specify plugins here
+  zgen oh-my-zsh
+  zgen oh-my-zsh plugins/git
+  zgen oh-my-zsh plugins/sudo
+  zgen oh-my-zsh plugins/command-not-found
+  zgen oh-my-zsh plugins/gnu-utils
+  zgen oh-my-zsh themes/awesomepanda
 
-# Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+  zgen load zsh-users/zsh-autosuggestions
+  zgen load zsh-users/zsh-apple-touchbar
 
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-HIST_STAMPS="yyyy-mm-dd"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras osx virtualenv kubectl aws zsh-256color tmux battery virtualenv vim-integration zsh-navigation-tools zsh_reload zsh-syntax-highlighting zsh-autosuggestions vault)
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-   export EDITOR='mvim'
+  # generate the init script from plugins above
+  zgen save
 fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+# zsh-users/zsh-apple-touchbar
+set_state 'first'
 
-# ssh
-export SSH_KEY_PATH="~/.ssh/rsa_id"
+function first_view() {
+  remove_and_unbind_keys
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
+  set_state 'first'
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/edwardvella/google-cloud-sdk/path.zsh.inc'; fi
+  create_key 1 '👉 pwd' 'pwd |tr -d "\\n" |pbcopy' '-s'
+  create_key 2 'second view' 'second_view'
+}
 
-# The next line enables shell command completion for gcloud.
-if [ -f '~/completion.zsh.inc' ]; then source '~/google-cloud-sdk/completion.zsh.inc'; fi
+function second_view() {
+  remove_and_unbind_keys
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+  set_state 'second'
 
-# Check if a .zshrc-extra file exists, this file is used to keep any machine specific
-# variables, functions local.
-touch ~/.zshrc-extra
-source ~/.zshrc-extra
+  create_key 1 '👈 back' 'first_view'
+  create_key 2 'current path' 'pwd' '-s'
 
-# Adding Percol {
+  set_state 'first'
+}
 
-function exists { which $1 &> /dev/null }
+zle -N first_view
+zle -N second_view
 
-if exists percol; then
-  function percol_select_history() {
-    local tac
-    exists gtac && tac="gtac" || { exists tac && tac="tac" || { tac="tail -r" } }
-    BUFFER=$(fc -l -n 1 | eval $tac | percol --query "$LBUFFER")
-    CURSOR=$#BUFFER         # move cursor
-    zle -R -c               # refresh
-  }
+precmd_apple_touchbar() {
+  case $state in
+    first) first_view ;;
+    second) second_view ;;
+  esac
+}
 
-  zle -N percol_select_history
-  bindkey '^R' percol_select_history
-fi
+autoload -Uz add-zsh-hook
 
-# }
-
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/nomad nomad
+add-zsh-hook precmd precmd_apple_touchbar

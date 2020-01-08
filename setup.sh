@@ -1,4 +1,7 @@
 #! /bin/bash
+# Install zgen
+git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
+
 REQUIREMENTS_FILE=requirements.json
 
 jq -r '.taps[]' ${REQUIREMENTS_FILE} | xargs -t -I {} sh -c 'brew tap "$1"' - {}
