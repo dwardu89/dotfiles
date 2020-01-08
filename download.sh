@@ -10,11 +10,10 @@ brew update
 brew install git jq
 
 # git clone repository to ~/dotfiles
-git clone https://github.com/dwardu89/dotfiles.git ~/dotfiles
+git clone https://github.com/dwardu89/dotfiles.git ${HOME}/dotfiles
 
 # Set working directory to dotfiles
-cd ~/dotfiles
+cd ${HOME}/dotfiles
 
 # Run setup
-~/dotfiles/setup.sh
-
+${HOME}/dotfiles/setup.sh

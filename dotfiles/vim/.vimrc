@@ -36,6 +36,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 " https://vimawesome.com/plugin/indent-guides
 Plugin 'nathanaelkane/vim-indent-guides'
 
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -55,8 +56,8 @@ nnoremap <F5> :GundoToggle<CR>
 
 syntax on
 set background=dark
-colorscheme solarized
-let g:solarized_termcolors=256
+" colorscheme solarized
+" let g:solarized_termcolors=256
 
 set number
 

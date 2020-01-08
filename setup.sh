@@ -1,14 +1,12 @@
 #! /bin/bash
 # Install zgen
-git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
+git clone git@github.com:tarjoilija/zgen.git "${HOME}/.zgen"
 
-#Set up the requirements required to install brew.
-REQUIREMENTS_FILE=requirements.json
+# Install Vundle
+git clone git@github.com:VundleVim/Vundle.vim.git "${HOME}/.vim/bundle/Vundle.vim"
 
-jq -r '.taps[]' ${REQUIREMENTS_FILE} | xargs -t -I {} sh -c 'brew tap "$1"' - {}
-jq -r '.formulae[]' ${REQUIREMENTS_FILE} | xargs -t -I {} sh -c 'brew install "$1"' - {}
-jq -r '.cask[]' ${REQUIREMENTS_FILE} | xargs -t -I {} sh -c 'brew cask install "$1"' - {}
+cd ${HOME}/dotfiles
 
-# link the zshrc file
-ln -s ~/dotfiles/dotfiles/.zshrc ~/.zshrc
-ls -l ~/dotfiles/dotfiles/.zshrc ~/.zshrc
+ls dotfiles -1 | xargs  -I % sh -c 'stow -d ~/dotfiles/dotfiles -t ${HOME} %'
+
+brew bundle
