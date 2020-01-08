@@ -45,7 +45,8 @@ if ! zgen saved; then
 
   zgen load zsh-users/zsh-autosuggestions
   zgen load zsh-users/zsh-apple-touchbar
-
+  
+  zgen load chrissicool/zsh-256color
   # generate the init script from plugins above
   zgen save
 fi
