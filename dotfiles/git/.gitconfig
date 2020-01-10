@@ -1,8 +1,15 @@
 
 [alias]
-  # ... other aliases
-  both-merged = !git-both-merged
-  not-merged = !git-not-merged
+        both-merged = !git-both-merged
+        not-merged = !git-not-merged
+	s = status
+	d = diff
+	co = checkout
+	br = branch
+	last = log -1 HEAD
+	cane = commit --amend --no-edit
+	pr = pull --rebase
+	lo = log --oneline -n 10
 
 [apply]
 
