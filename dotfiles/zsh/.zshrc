@@ -17,7 +17,7 @@ PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 PATH="/usr/local/opt/m4/bin:$PATH"
 PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 PATH="/usr/local/opt/ncurses/bin:$PATH"
-
+PATH="${HOME}/dotfiles/bin:$PATH"
 
 # source anaconda
 # echo "Conda activated"

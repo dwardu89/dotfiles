@@ -1,4 +1,9 @@
 
+[alias]
+  # ... other aliases
+  both-merged = !git-both-merged
+  not-merged = !git-not-merged
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
