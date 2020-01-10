@@ -1,7 +1,8 @@
 
 [alias]
-        both-merged = !git-both-merged
-        not-merged = !git-not-merged
+	check = !git-check
+	both-merged = !git-both-merged
+	not-merged = !git-not-merged
 	s = status
 	d = diff
 	co = checkout
