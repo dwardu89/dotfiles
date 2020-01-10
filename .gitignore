@@ -1,3 +1,4 @@
 .DS_Store
 setup_debug.sh
 
+Brewfile.lock.json
