@@ -34,7 +34,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 
 " Indent Guides
 " https://vimawesome.com/plugin/indent-guides
-Plugin 'nathanaelkane/vim-indent-guides'
+" Plugin 'nathanaelkane/vim-indent-guides'
 
 
 " All of your Plugins must be added before the following line
