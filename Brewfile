@@ -1,5 +1,6 @@
 tap "aws/tap"
 tap "bazelbuild/tap"
+tap "github/gh"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
@@ -71,6 +72,7 @@ brew "zsh-history-substring-search"
 brew "zsh-syntax-highlighting"
 brew "aws/tap/aws-sam-cli"
 brew "bazelbuild/tap/bazel"
+brew "github/gh/gh"
 brew "jenkins-x/jx/jx"
 brew "karhoo/envy/envy"
 brew "karhoo/brew/k-tools"
@@ -132,7 +134,6 @@ cask "visual-studio-code"
 cask "vlc"
 cask "whatsapp"
 cask "wireshark"
-mas "1Blocker", id: 1107421413
 mas "Comment Wrapper", id: 1377998565
 mas "Evernote Web Clipper", id: 1481669779
 mas "Fantastical", id: 975937182

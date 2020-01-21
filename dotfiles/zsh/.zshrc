@@ -1,4 +1,5 @@
 export MAIN_EDITOR="vim"
+export EDITOR=${MAIN_EDITOR}
 export HISTFILE=~/.zsh_history
 export HISTSIZE=100000
 
