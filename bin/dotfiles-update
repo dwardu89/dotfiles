@@ -2,4 +2,5 @@
 
 set -euo pipefail
 
-dotfiles-master-check
+dotfiles-pull-latest
+
