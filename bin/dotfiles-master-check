@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+DOTFILES_DIR=${1:-"~/dotfiles"}
+BRANCH_TO_CHECK=${CHECK_BRANCH:-"master"}
+CURRENT_BRANCH=$(git branch --show-current $DOTFILES_DIR)
+
+if [ $CURRENT_BRANCH != $BRANCH_TO_CHECK ];
+then
+    echo "Dotfiles folder not on the [${BRANCH_TO_CHECK}] branch!"
+    exit 1
+else
+    echo "Dotfiles folder on [${BRANCH_TO_CHECK}] branch"
+    exit 0
+fi

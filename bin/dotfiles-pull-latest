@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+DOTFILES_DIR=${1:-~/dotfiles}
+
+dotfiles-master-check
+echo $DOTFILES_DIR
+if [ -n "$(git status --porcelain -- $DOTFILES_DIR)" ]; then
+  echo "there are changes";
+  exit 1
+else
+  git pull $DOTFILES_DIR
+  echo "no changes";
+fi
