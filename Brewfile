@@ -1,5 +1,6 @@
 tap "aws/tap"
 tap "bazelbuild/tap"
+tap "github/gh"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
@@ -130,7 +131,7 @@ brew "zsh-syntax-highlighting"
 brew "aws/tap/aws-sam-cli"
 # Fast, scalable, multi-language and extensible build system
 brew "bazelbuild/tap/bazel"
-# A tool to install and interact with Jenkins X on your Kubernetes cluster.
+brew "github/gh/gh"
 brew "jenkins-x/jx/jx"
 # A tool for deploying and managing Karhoo's Kubernetes-based services.
 brew "karhoo/envy/envy"
@@ -201,7 +202,6 @@ cask "visual-studio-code"
 cask "vlc"
 cask "whatsapp"
 cask "wireshark"
-mas "1Blocker", id: 1107421413
 mas "Comment Wrapper", id: 1377998565
 mas "Evernote Web Clipper", id: 1481669779
 mas "Fantastical", id: 975937182
