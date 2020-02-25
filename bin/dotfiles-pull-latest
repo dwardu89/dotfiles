@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+OLD_DIR=$PWD
+
 DOTFILES_DIR=${1:-~/dotfiles}
+cd $DOTFILES_DIR
 
 dotfiles-master-check
 echo $DOTFILES_DIR
@@ -12,3 +15,5 @@ else
   git pull $DOTFILES_DIR
   echo "no changes";
 fi
+
+cd $OLD_DIR

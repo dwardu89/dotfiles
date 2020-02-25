@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-DOTFILES_DIR=${1:-"~/dotfiles"}
-BRANCH_TO_CHECK=${CHECK_BRANCH:-"master"}
+OLD_DIR=$PWD
+
+DOTFILES_DIR=${1:-~/dotfiles}
+cd $DOTFILES_DIR
+
+BRANCH_TO_CHECK=${CHECK_BRANCH:-master}
 CURRENT_BRANCH=$(git branch --show-current $DOTFILES_DIR)
 
 if [ $CURRENT_BRANCH != $BRANCH_TO_CHECK ];
@@ -13,3 +17,5 @@ else
     echo "Dotfiles folder on [${BRANCH_TO_CHECK}] branch"
     exit 0
 fi
+
+cd $OLD_DIR
