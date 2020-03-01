@@ -4,10 +4,10 @@ set -euo pipefail
 
 DOTFILES_DIR=${1:-~/dotfiles/Brewfile}
 
-brew bundle --file=$DOTFILES_DIR
-
 # Update homebrew
 brew update
 
 # Upgrade homebrew projects
 brew upgrade
+
+brew bundle --file=$DOTFILES_DIR
