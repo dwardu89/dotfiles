@@ -12,7 +12,7 @@ if [ -n "$(git status --porcelain -- $DOTFILES_DIR)" ]; then
   echo "there are changes";
   exit 1
 else
-  git pull $DOTFILES_DIR
+  git pull
   echo "no changes";
 fi
 
