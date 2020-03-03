@@ -4,7 +4,6 @@ Dotfiles and MacOS Setup
 ### Run the whole script
 
 You can run the script by calling the following command in your terminal. It will download the repository to you from git and store it in `~/dotfiles`.
-
 ```
 bash <(curl https://raw.githubusercontent.com/dwardu89/dotfiles/master/download.sh)
 ```
