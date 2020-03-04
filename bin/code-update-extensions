@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+DOTFILES_DIR=${1:-~/dotfiles}
+EXTENSIONS_LIST="${DOTFILES_DIR}/conf/vscode/extensions.list"
+
+sh ${EXTENSIONS_LIST}

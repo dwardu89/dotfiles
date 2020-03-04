@@ -5,3 +5,5 @@ set -euo pipefail
 dotfiles-pull-latest
 
 dotfiles-update-brew
+
+dotfiles-sync-extensions

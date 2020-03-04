@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+OLD_DIR=$PWD
+DOTFILES_DIR=${1:-~/dotfiles}
+EXTENSIONS_LIST="${DOTFILES_DIR}/conf/vscode/extensions.list"
+
+cd $DOTFILES_DIR
+
+# Ensure you are only committing the extensions.list
+git reset
+git add ${EXTENSIONS_LIST}
+git commit -m "Updating the extensions list file"
+git push
+
+cd $OLD_DIR

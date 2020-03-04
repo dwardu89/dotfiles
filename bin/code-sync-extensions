@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+echo "Syncing VS Code Extensions"
+
+code-update-extensions
+
+code-export-extensions
+
+code-push-extensions

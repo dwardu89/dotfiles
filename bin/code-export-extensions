@@ -1,3 +1,9 @@
 #!/usr/bin/env bash
 
-code --list-extensions | awk '{print "code --install-extension " $1}'
+DOTFILES_DIR=${1:-~/dotfiles}
+EXTENSIONS_LIST="${DOTFILES_DIR}/conf/vscode/extensions.list"
+
+code --list-extensions | awk '{print "code --install-extension " $1 " --force"}' > ${EXTENSIONS_LIST}
+
+# Ensure extensions list can be run
+chmod +x ${EXTENSIONS_LIST}
