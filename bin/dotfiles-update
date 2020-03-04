@@ -6,4 +6,4 @@ dotfiles-pull-latest
 
 dotfiles-update-brew
 
-dotfiles-sync-extensions
+code-sync-extensions
