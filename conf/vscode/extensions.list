@@ -20,8 +20,6 @@ code --install-extension ms-vsliveshare.vsliveshare-audio --force
 code --install-extension ms-vsliveshare.vsliveshare-pack --force
 code --install-extension quicktype.quicktype --force
 code --install-extension redhat.vscode-yaml --force
-code --install-extension stepanog.cage-icons --force
-code --install-extension technosophos.vscode-helm --force
 code --install-extension vahidk.tensorflow-snippets --force
 code --install-extension waderyan.gitblame --force
 code --install-extension yzhang.markdown-all-in-one --force
