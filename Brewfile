@@ -11,8 +11,11 @@ tap "jenkins-x/jx"
 tap "karhoo/brew", "git@github.com:karhoo/brew"
 tap "karhoo/envy", "git@github.com:karhoo/envy"
 tap "lhopki01/brew", "git@github.com:lhopki01/brew"
+tap "weaveworks/tap"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
+# ARP scanning and fingerprinting tool
+brew "arp-scan"
 # Integrated shell for working with the AWS CLI
 brew "aws-shell"
 # Official Amazon AWS command-line interface
@@ -23,6 +26,8 @@ brew "binutils"
 brew "consul"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
 # Good-lookin' diffs with diff-highlight and more
 brew "diff-so-fancy"
 # File comparison utilities
@@ -43,6 +48,8 @@ brew "git"
 brew "git-crypt"
 # Prevents you from committing sensitive information to a git repo
 brew "git-secrets"
+# GNU Transport Layer Security (TLS) Library
+brew "gnutls"
 # C code prettifier
 brew "gnu-indent"
 # GNU implementation of the famous stream editor
@@ -51,8 +58,6 @@ brew "gnu-sed"
 brew "gnu-tar"
 # GNU implementation of which utility
 brew "gnu-which"
-# GNU Transport Layer Security (TLS) Library
-brew "gnutls"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # GNU grep, egrep and fgrep
@@ -63,6 +68,8 @@ brew "gzip"
 brew "hashcat"
 # Add GitHub support to git on the command-line
 brew "hub"
+# Calculate various network masks, etc. from a given IP address
+brew "ipcalc"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # LastPass command-line interface tool
@@ -75,6 +82,8 @@ brew "m4"
 brew "make"
 # Mac App Store command-line interface
 brew "mas"
+# Command-line client for Mega.co.nz
+brew "megatools"
 # Run a Kubernetes cluster locally
 brew "minikube"
 # Free (GNU) replacement for the Pico text editor
@@ -85,6 +94,8 @@ brew "nmap"
 brew "openjdk"
 # Tool for creating identical machine images for multiple platforms
 brew "packer"
+# Monitor data's progress through a pipe
+brew "pv"
 # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
 # Reattach process (e.g., tmux) to background
@@ -101,6 +112,8 @@ brew "terraform"
 brew "tmux"
 # Extract, view, and test RAR archives
 brew "unrar"
+# Extraction utility for .zip compressed archives
+brew "unzip"
 # Secures, stores, and tightly controls access to secrets
 brew "vault"
 # Executes a program periodically, showing output fullscreen
@@ -131,7 +144,9 @@ brew "zsh-syntax-highlighting"
 brew "aws/tap/aws-sam-cli"
 # Fast, scalable, multi-language and extensible build system
 brew "bazelbuild/tap/bazel"
+# GitHub CLI
 brew "github/gh/gh"
+# A tool to install and interact with Jenkins X on your Kubernetes cluster.
 brew "jenkins-x/jx/jx"
 # A tool for deploying and managing Karhoo's Kubernetes-based services.
 brew "karhoo/envy/envy"
@@ -139,10 +154,14 @@ brew "karhoo/envy/envy"
 brew "karhoo/brew/k-tools"
 # The Kubernetes package manager
 brew "karhoo/brew/kubernetes-helm"
+# 
+brew "lhopki01/brew/dirin"
 # Tool to build multiple dependent docker images in the correct order
 brew "lhopki01/brew/docker-chain-builder"
 # Tool to keep multiple local repos in sync with github
 brew "lhopki01/brew/git-mass-sync"
+# The official CLI for Amazon EKS
+brew "weaveworks/tap/eksctl"
 cask "1password"
 cask "1password-cli"
 cask "adobe-creative-cloud"
@@ -152,8 +171,10 @@ cask "anaconda"
 cask "arduino"
 cask "balenaetcher"
 cask "brave-browser"
+cask "calibre"
 cask "canon-pixma-scanner-driver-ica"
 cask "charles"
+cask "colloquy"
 cask "cyberduck"
 cask "dash"
 cask "discord"
@@ -189,6 +210,7 @@ cask "pgadmin4"
 cask "postman"
 cask "protonmail-bridge"
 cask "pycharm-ce"
+cask "sequel-pro"
 cask "signal"
 cask "slack"
 cask "spotify"
@@ -202,6 +224,8 @@ cask "visual-studio-code"
 cask "vlc"
 cask "whatsapp"
 cask "wireshark"
+cask "zoomus"
+mas "1Blocker", id: 1107421413
 mas "Comment Wrapper", id: 1377998565
 mas "Evernote Web Clipper", id: 1481669779
 mas "Fantastical", id: 975937182
