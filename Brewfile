@@ -8,8 +8,6 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "jenkins-x/jx"
-tap "karhoo/brew", "git@github.com:karhoo/brew"
-tap "karhoo/envy", "git@github.com:karhoo/envy"
 tap "lhopki01/brew", "git@github.com:lhopki01/brew"
 tap "weaveworks/tap"
 # Automate deployment, configuration, and upgrading
@@ -66,6 +64,8 @@ brew "grep"
 brew "gzip"
 # World's fastest and most advanced password recovery utility
 brew "hashcat"
+# The Kubernetes package manager
+brew "helm", link: false
 # Add GitHub support to git on the command-line
 brew "hub"
 # Calculate various network masks, etc. from a given IP address
@@ -148,12 +148,6 @@ brew "bazelbuild/tap/bazel"
 brew "github/gh/gh"
 # A tool to install and interact with Jenkins X on your Kubernetes cluster.
 brew "jenkins-x/jx/jx"
-# A tool for deploying and managing Karhoo's Kubernetes-based services.
-brew "karhoo/envy/envy"
-# Collection of common Karhoo tools
-brew "karhoo/brew/k-tools"
-# The Kubernetes package manager
-brew "karhoo/brew/kubernetes-helm"
 # 
 brew "lhopki01/brew/dirin"
 # Tool to build multiple dependent docker images in the correct order
