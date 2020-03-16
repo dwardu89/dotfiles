@@ -10,6 +10,7 @@
 	a = add .
 	cm = commit -m
 	rh = reset --hard
+	ignore = "!gi() { curl -sL https://www.gitignore.io/api/$@ ;}; gi"
 
 [apply]
 
