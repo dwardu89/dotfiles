@@ -91,3 +91,4 @@ add-zsh-hook precmd precmd_apple_touchbar
 export PATH="${PATH}:${HOME}/go/bin"
 
 source ${HOME}/.zshrc.local
+function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
