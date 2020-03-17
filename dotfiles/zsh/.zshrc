@@ -91,4 +91,8 @@ add-zsh-hook precmd precmd_apple_touchbar
 export PATH="${PATH}:${HOME}/go/bin"
 
 source ${HOME}/.zshrc.local
+
+# Openvpn path
+export PATH=$(brew --prefix openvpn)/sbin:$PATH
+
 function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}

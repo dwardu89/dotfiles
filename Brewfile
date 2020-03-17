@@ -9,6 +9,7 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "jenkins-x/jx"
 tap "lhopki01/brew", "git@github.com:lhopki01/brew"
+tap "versent/taps"
 tap "weaveworks/tap"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
@@ -64,8 +65,6 @@ brew "grep"
 brew "gzip"
 # World's fastest and most advanced password recovery utility
 brew "hashcat"
-# The Kubernetes package manager
-brew "helm", link: false
 # Add GitHub support to git on the command-line
 brew "hub"
 # Calculate various network masks, etc. from a given IP address
@@ -92,6 +91,8 @@ brew "nano"
 brew "nmap"
 # Development kit for the Java programming language
 brew "openjdk"
+# SSL/TLS VPN implementing OSI layer 2 or 3 secure network extension
+brew "openvpn"
 # Tool for creating identical machine images for multiple platforms
 brew "packer"
 # Monitor data's progress through a pipe
@@ -154,6 +155,7 @@ brew "lhopki01/brew/dirin"
 brew "lhopki01/brew/docker-chain-builder"
 # Tool to keep multiple local repos in sync with github
 brew "lhopki01/brew/git-mass-sync"
+brew "versent/taps/saml2aws"
 # The official CLI for Amazon EKS
 brew "weaveworks/tap/eksctl"
 cask "1password"
@@ -163,6 +165,7 @@ cask "adoptopenjdk"
 cask "alfred"
 cask "anaconda"
 cask "arduino"
+cask "authy"
 cask "balenaetcher"
 cask "brave-browser"
 cask "calibre"
@@ -200,12 +203,14 @@ cask "kensington-trackball-works"
 cask "keybase"
 cask "logitech-options"
 cask "onionshare"
+cask "openvpn-connect"
 cask "pgadmin4"
 cask "postman"
 cask "protonmail-bridge"
 cask "pycharm-ce"
 cask "sequel-pro"
 cask "signal"
+cask "skype"
 cask "slack"
 cask "spotify"
 cask "steam"
