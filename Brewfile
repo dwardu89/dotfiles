@@ -9,8 +9,8 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "jenkins-x/jx"
 tap "lhopki01/brew", "git@github.com:lhopki01/brew"
-tap "versent/taps"
 tap "weaveworks/tap"
+tap "xmachinas/taps", "git@bitbucket.org:xmachinas/homebrew-taps.git"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
 # ARP scanning and fingerprinting tool
@@ -71,6 +71,8 @@ brew "hub"
 brew "ipcalc"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Generic command-line non-JVM Apache Kafka producer and consumer
+brew "kafkacat"
 # LastPass command-line interface tool
 brew "lastpass-cli"
 # Pager program similar to more
@@ -109,6 +111,8 @@ brew "stow"
 brew "swagger-codegen"
 # Tool to build, change, and version infrastructure
 brew "terraform"
+# Linter for Terraform files
+brew "tflint"
 # Terminal multiplexer
 brew "tmux"
 # Extract, view, and test RAR archives
@@ -155,9 +159,9 @@ brew "lhopki01/brew/dirin"
 brew "lhopki01/brew/docker-chain-builder"
 # Tool to keep multiple local repos in sync with github
 brew "lhopki01/brew/git-mass-sync"
-brew "versent/taps/saml2aws"
 # The official CLI for Amazon EKS
 brew "weaveworks/tap/eksctl"
+brew "xmachinas/taps/saml2aws"
 cask "1password"
 cask "1password-cli"
 cask "adobe-creative-cloud"
@@ -202,6 +206,7 @@ cask "jabra-direct"
 cask "kensington-trackball-works"
 cask "keybase"
 cask "logitech-options"
+cask "malwarebytes"
 cask "onionshare"
 cask "openvpn-connect"
 cask "pgadmin4"
