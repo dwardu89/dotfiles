@@ -95,4 +95,5 @@ source ${HOME}/.zshrc.local
 # Openvpn path
 export PATH=$(brew --prefix openvpn)/sbin:$PATH
 
+function s2a { eval $( $(which saml2aws) script --shell=bash --profile=$@); }
 function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
