@@ -59,6 +59,8 @@ brew "gnu-tar"
 brew "gnu-which"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
 # GNU grep, egrep and fgrep
 brew "grep"
 # Popular GNU data compression program
@@ -107,8 +109,6 @@ brew "reattach-to-user-namespace"
 brew "screen"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
-# Generate clients, server stubs, and docs from an OpenAPI spec
-brew "swagger-codegen"
 # Tool to build, change, and version infrastructure
 brew "terraform"
 # Linter for Terraform files
