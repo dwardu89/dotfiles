@@ -33,6 +33,8 @@ brew "diff-so-fancy"
 brew "diffutils"
 # Pack, ship and run any application as a lightweight container
 brew "docker", link: false
+# macOS Credential Helper for Docker
+brew "docker-credential-helper"
 # Docker Machine Parallels Driver
 brew "docker-machine-parallels"
 # Classic UNIX line editor
@@ -199,7 +201,6 @@ cask "font-source-code-pro"
 cask "font-source-sans-pro"
 cask "font-source-serif-pro"
 cask "google-chrome"
-cask "google-cloud-sdk"
 cask "gpg-suite"
 cask "iterm2"
 cask "jabra-direct"
@@ -217,6 +218,7 @@ cask "sequel-pro"
 cask "signal"
 cask "skype"
 cask "slack"
+cask "sony-ps4-remote-play"
 cask "spotify"
 cask "steam"
 cask "teamviewer"
