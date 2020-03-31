@@ -4,6 +4,7 @@ code --install-extension Arjun.swagger-viewer --force
 code --install-extension aws-scripting-guy.cform --force
 code --install-extension bierner.markdown-preview-github-styles --force
 code --install-extension DavidAnson.vscode-markdownlint --force
+code --install-extension deerawan.vscode-dash --force
 code --install-extension donjayamanne.githistory --force
 code --install-extension eamodio.gitlens --force
 code --install-extension EFanZh.graphviz-preview --force
