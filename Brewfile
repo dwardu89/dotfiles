@@ -69,6 +69,8 @@ brew "grep"
 brew "gzip"
 # World's fastest and most advanced password recovery utility
 brew "hashcat"
+# The Kubernetes package manager
+brew "helm"
 # Add GitHub support to git on the command-line
 brew "hub"
 # Calculate various network masks, etc. from a given IP address
@@ -109,6 +111,8 @@ brew "pyenv-virtualenv"
 brew "reattach-to-user-namespace"
 # Terminal multiplexer with VT100/ANSI terminal emulation
 brew "screen"
+# Easy and Repeatable Kubernetes Development
+brew "skaffold"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
 # Tool to build, change, and version infrastructure
@@ -214,6 +218,7 @@ cask "pgadmin4"
 cask "postman"
 cask "protonmail-bridge"
 cask "pycharm-ce"
+cask "raspberry-pi-imager"
 cask "sequel-pro"
 cask "signal"
 cask "skype"
@@ -228,6 +233,7 @@ cask "tunnelblick"
 cask "virtualbox"
 cask "visual-studio-code"
 cask "vlc"
+cask "vnc-viewer"
 cask "whatsapp"
 cask "wireshark"
 cask "zoomus"
