@@ -92,8 +92,14 @@ export PATH="${PATH}:${HOME}/go/bin"
 
 source ${HOME}/.zshrc.local
 
+### Aliases
+
+alias kuebctl='kubectl'
+alias k='kubectl'
+
 # Openvpn path
 export PATH=$(brew --prefix openvpn)/sbin:$PATH
 
 function s2a { eval $( $(which saml2aws) script --shell=bash --profile=$@); }
 function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
