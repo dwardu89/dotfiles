@@ -13,6 +13,7 @@ code --install-extension geeklearningio.graphviz-markdown-preview --force
 code --install-extension joaompinto.vscode-graphviz --force
 code --install-extension johnpapa.vscode-peacock --force
 code --install-extension karigari.chat --force
+code --install-extension mathiasfrohlich.Kotlin --force
 code --install-extension mauve.terraform --force
 code --install-extension ms-azuretools.vscode-docker --force
 code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools --force
@@ -24,6 +25,7 @@ code --install-extension ms-vsliveshare.vsliveshare-audio --force
 code --install-extension ms-vsliveshare.vsliveshare-pack --force
 code --install-extension quicktype.quicktype --force
 code --install-extension redhat.vscode-yaml --force
+code --install-extension tomoki1207.pdf --force
 code --install-extension vahidk.tensorflow-snippets --force
 code --install-extension waderyan.gitblame --force
 code --install-extension yzhang.markdown-all-in-one --force
