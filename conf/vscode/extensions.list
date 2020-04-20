@@ -1,6 +1,7 @@
 code --install-extension 42Crunch.vscode-openapi --force
 code --install-extension amazonwebservices.aws-toolkit-vscode --force
 code --install-extension Arjun.swagger-viewer --force
+code --install-extension atlassian.atlascode --force
 code --install-extension aws-scripting-guy.cform --force
 code --install-extension bierner.markdown-preview-github-styles --force
 code --install-extension DavidAnson.vscode-markdownlint --force
