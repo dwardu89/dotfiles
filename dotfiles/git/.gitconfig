@@ -20,7 +20,7 @@
 [core]
 
 	# Use custom `.gitignore` and `.gitattributes`
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/edwardvella/.gitignore_global
 	attributesfile = ~/.gitattributes
 
 	# Treat spaces before tabs and all kinds of trailing whitespace as an error
@@ -136,3 +136,5 @@
 [rerere]
 	enabled = true
 	autoupdate = true
+[commit]
+	template = /Users/edwardvella/.stCommitMsg

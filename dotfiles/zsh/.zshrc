@@ -103,3 +103,6 @@ export PATH=$(brew --prefix openvpn)/sbin:$PATH
 function s2a { eval $( $(which saml2aws) script --shell=bash --profile=$@); }
 function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
+alias k=kubectl
+source <(kubectl completion zsh)
+export PATH="/usr/local/opt/ruby/bin:$PATH"
