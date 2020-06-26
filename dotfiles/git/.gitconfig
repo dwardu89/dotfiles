@@ -138,3 +138,5 @@
 	autoupdate = true
 [commit]
 	template = /Users/edwardvella/.stCommitMsg
+[pull]
+	rebase = false

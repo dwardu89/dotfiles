@@ -59,7 +59,7 @@ set background=dark
 " colorscheme solarized
 " let g:solarized_termcolors=256
 
-set number
+set nocompatible ruler laststatus=2 showcmd showmode number
 
 set tabstop=8
 set expandtab
