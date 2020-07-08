@@ -108,7 +108,7 @@ source <(kubectl completion zsh)
 source /Users/edwardvella/.tractablerc
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 PATH="/usr/local/sbin:$PATH"
-PATH="/Users/edwardvella/tractable/istio-1.6.1/bin:$PATH"
+PATH="/Users/edwardvella/tractable/istio-1.6.3/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
