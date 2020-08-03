@@ -1,4 +1,4 @@
 .DS_Store
 setup_debug.sh
-
+*.swp
 Brewfile.lock.json
