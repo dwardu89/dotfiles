@@ -105,7 +105,7 @@ function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
 PATH="/usr/local/opt/openjdk/bin:$PATH"
 alias k=kubectl
 source <(kubectl completion zsh)
-source /Users/edwardvella/.tractablerc
+
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 PATH="/usr/local/sbin:$PATH"
 PATH="/Users/edwardvella/tractable/istio-1.6.3/bin:$PATH"
@@ -114,3 +114,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 PATH="${PATH}:${HOME}/.krew/bin"
+GOPATH="${HOME}/go"
+
+
+# Kubernetes aliases
+source ~/.zshrc.k8salias

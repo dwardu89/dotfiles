@@ -1,0 +1,4 @@
+alias kg="kubectl get"
+alias kc="kubectl create -f"
+alias kl="kubectl logs"
+
