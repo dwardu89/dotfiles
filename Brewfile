@@ -10,7 +10,6 @@ tap "homebrew/core"
 tap "jenkins-x/jx"
 tap "lhopki01/brew", "git@github.com:lhopki01/brew"
 tap "weaveworks/tap"
-tap "xmachinas/taps", "git@bitbucket.org:xmachinas/homebrew-taps.git"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
 # ARP scanning and fingerprinting tool
@@ -167,7 +166,6 @@ brew "lhopki01/brew/docker-chain-builder"
 brew "lhopki01/brew/git-mass-sync"
 # The official CLI for Amazon EKS
 brew "weaveworks/tap/eksctl"
-brew "xmachinas/taps/saml2aws"
 cask "1password"
 cask "1password-cli"
 cask "adobe-creative-cloud"
