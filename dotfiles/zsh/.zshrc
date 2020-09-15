@@ -21,7 +21,7 @@ PATH="${HOME}/.local/bin:$PATH"
 
 # source anaconda
 # echo "Conda activated"
-source /usr/local/anaconda3/bin/activate
+#source /usr/local/anaconda3/bin/activate
 
 # load zgen
 # Set the automated reset on change
