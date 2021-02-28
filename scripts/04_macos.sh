@@ -66,5 +66,5 @@ configure_macos () {
 
   # Login Window
   # Add text to login screen
-  sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "If found please contact: ${lockscreen_name}\n e-mail: ${email}\n tel: ${telephone}"  <<< "${sudo_password}" 2> /dev/null
+  # sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "If found please contact: ${lockscreen_name}\n e-mail: ${email}\n tel: ${telephone}"  <<< "${sudo_password}" 2> /dev/null
 }
