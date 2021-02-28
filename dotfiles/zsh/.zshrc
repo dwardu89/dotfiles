@@ -21,7 +21,7 @@ PATH="${HOME}/.local/bin:$PATH"
 
 # source anaconda
 # echo "Conda activated"
-#source /usr/local/anaconda3/bin/activate
+# source /usr/local/anaconda3/bin/activate
 
 # load zgen
 # Set the automated reset on change
@@ -119,3 +119,12 @@ GOPATH="${HOME}/go"
 
 # Kubernetes aliases
 source ~/.zshrc.k8salias
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+export PATH="/usr/local/opt/curl-openssl/bin:$PATH"
+export PATH="/usr/local/opt/curl-openssl/bin:$PATH"
+export PATH="/usr/local/opt/curl/bin:$PATH"
+
+neofetch
+. "/Users/edwardvella/.acme.sh/acme.sh.env"

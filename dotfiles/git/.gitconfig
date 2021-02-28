@@ -140,3 +140,5 @@
 	template = /Users/edwardvella/.stCommitMsg
 [pull]
 	rebase = false
+[init]
+	defaultBranch = master
