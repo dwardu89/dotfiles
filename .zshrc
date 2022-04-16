@@ -19,52 +19,14 @@ PATH="/usr/local/opt/ncurses/bin:$PATH"
 PATH="${HOME}/dotfiles/bin:$PATH"
 PATH="${HOME}/.local/bin:$PATH"
 
-# load zgen
-# Set the automated reset on change
-ZGEN_RESET_ON_CHANGE=(${HOME}/.zshrc)
-source "${HOME}/.zgen/zgen.zsh"
-
-# zsh-users/zsh-autosuggestions
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff0010,bg=#000000,bold,underline"
-ZSH_AUTOSUGGEST_STRATEGY="history"
-
-# if the init script doesn't exist
-if ! zgen saved; then
-
-  # specify plugins here
-  zgen oh-my-zsh
-  zgen oh-my-zsh plugins/git
-  zgen oh-my-zsh plugins/sudo
-  zgen oh-my-zsh plugins/command-not-found
-  zgen oh-my-zsh plugins/gnu-utils
-  zgen oh-my-zsh plugins/gitignore
-  zgen oh-my-zsh plugins/osx
-
-  zgen oh-my-zsh themes/awesomepanda
-
-  zgen load zsh-users/zsh-autosuggestions
-  zgen load zsh-users/zsh-apple-touchbar
-  
-  zgen load chrissicool/zsh-256color
-  # generate the init script from plugins above
-  zgen save
-fi
-
-autoload -Uz add-zsh-hook
-
-add-zsh-hook precmd precmd_apple_touchbar
-
 export PATH="${PATH}:${HOME}/go/bin"
 
 ### Aliases
 
-alias kuebctl='kubectl'
-alias k='kubectl'
+alias code='codium'
 
 function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
 PATH="/usr/local/opt/openjdk/bin:$PATH"
-alias k=kubectl
-source <(kubectl completion zsh)
 
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 PATH="/usr/local/sbin:$PATH"
